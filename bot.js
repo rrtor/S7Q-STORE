@@ -44,7 +44,7 @@ if(message.author.bot) return;
     channel: "welcome"
 }
 const channel = sWlc[message.guild.id].channel
-  if (message.content.startsWith(prefix + "S7Q")) {
+  if (message.content.startsWith(prefix + "wel")) {
     if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
     let newChannel = message.content.split(' ').slice(1).join(" ")
     if(!newChannel) return message.reply(`**${prefix}setwelcomer <channel name>**`)
@@ -78,7 +78,7 @@ client.on("guildMemberAdd", member => {
       var Canvas = require('canvas')
       var jimp = require('jimp')
       
-      const w = ['S7Q.png'];
+      const w = ['hamo.png'];
       
               let Image = Canvas.Image,
                   canvas = new Canvas(557, 241),
@@ -136,10 +136,10 @@ client.on("guildMemberAdd", member => {
 
 
 client.on("guildMemberAdd", (member) => {
-client.channels.get('486325753076776962').edit({name : `أعضاء السيرفر : ${member.guild.memberCount}`});
+client.channels.get('485278175740428289').edit({name : `أعضاء السيرفر : ${member.guild.memberCount}`});
 })
 client.on("guildMemberRemove", (member) => {
-client.channels.get('486325753076776962').edit({name : `أعضاء السيرفر : ${member.guild.memberCount} `});
+client.channels.get('485278175740428289').edit({name : `أعضاء السيرفر : ${member.guild.memberCount} `});
 })
 
 client.on('message', message => {
@@ -367,7 +367,7 @@ client.on('message', message => {
           
 
            if (message.content.startsWith(prefix + "id")) {
-           if (message.channel.id !== "485875708204417035") return;
+           if (message.channel.id !== "472320725647228928") return;
             
             if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات ❌`);
 
@@ -412,7 +412,30 @@ var mentionned = message.mentions.members.first();
      });
 
 
+client.on('message', message => {
+    if(message.content === 'الشعار'){
+        message.channel.send(':arrow_down:شعار دسكورد ')
+    }
+});
 
+
+client.on('message', message => {
+    if(message.content === 'الشعار'){
+        message.channel.send('``!S7Q |``')
+    }
+});
+
+client.on('message', message => {
+    if(message.content === 'الشعار'){
+        message.channel.send(':arrow_down:شعار العبه')
+    }
+});
+
+client.on('message', message => {
+    if(message.content === 'الشعار'){
+        message.channel.send('``ζ͡𝒮𝟳𝒬``')
+    }
+});
 
 
 
@@ -446,7 +469,7 @@ client.on('message', msg => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("S7Q STORE",{type: 'WATCHING'});
+     client.user.setActivity("S7Q 4 EVER",{type: 'WATCHING'});
 
 });
 
@@ -617,24 +640,7 @@ client.on('message', message => {
 
 
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '486326532520935445').setName("W");
-client.channels.find('id', '486326532520935445').setName("We");
-client.channels.find('id', '486326532520935445').setName("Wel");
-client.channels.find('id', '486326532520935445').setName("Welc");
-client.channels.find('id', '486326532520935445').setName("Welco");
-client.channels.find('id', '486326532520935445').setName("Welcom");
-client.channels.find('id', '486326532520935445').setName("Welcome");
-client.channels.find('id', '486326532520935445').setName("Welcome T");
-client.channels.find('id', '486326532520935445').setName("Welcome To");
-client.channels.find('id', '486326532520935445').setName("Welcome To S");
-client.channels.find('id', '486326532520935445').setName("Welcome To S7");
-client.channels.find('id', '486326532520935445').setName("Welcome To S7Q STO");
-client.channels.find('id', '486326532520935445').setName("Welcome To S7Q STOR");
-client.channels.find('id', '486326532520935445').setName("Welcome To S7Q STORE");
-  }, 3000);
-});
+
 
 
 
